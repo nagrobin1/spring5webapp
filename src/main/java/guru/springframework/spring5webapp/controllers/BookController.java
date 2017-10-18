@@ -13,6 +13,7 @@ public class BookController {
 
     private BookRepository bookRepository;
 
+    // DI from DevBootStrap
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
