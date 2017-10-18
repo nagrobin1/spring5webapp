@@ -1,5 +1,7 @@
 package guru.springframework.spring5webapp.model;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -26,16 +28,14 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String isbn, Publisher publisher) {
+    public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
-        this.publisher = publisher;
     }
 
-    public Book(String title, String isbn, Publisher publisher, Set<Author> authors) {
+    public Book(String title, String isbn, Set<Author> authors) {
         this.title = title;
         this.isbn = isbn;
-        this.publisher = publisher;
         this.authors = authors;
     }
 
